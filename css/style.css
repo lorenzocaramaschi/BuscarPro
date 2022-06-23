@@ -10,5 +10,128 @@
   font-family: "Go Pro";
   src: url(../fonts/Microgramma\ D\ Extended\ Medium.otf);
 }
+body header {
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+body header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+body header nav ul .carrito {
+  font-size: 3rem;
+  margin-right: 2rem;
+}
+body header nav ul .carrito:hover {
+  cursor: pointer;
+}
+body main {
+  background-color: #0367A6;
+  color: white;
+}
+body main .titulo {
+  text-align: center;
+  padding: 1.5rem;
+  transition: 1s;
+}
+body main .titulo:hover {
+  transform: scale(1.02);
+}
+body main .titulo h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+body main .titulo h2 {
+  font-size: 2.5rem;
+}
+body main .galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+body main .galeria .producto {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: 1s;
+}
+body main .galeria .producto .imagen-producto {
+  width: 100%;
+  border-radius: 1rem;
+}
+body main .galeria .producto .precio {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  transition: 0.5s;
+}
+body main .galeria .producto .precio:hover {
+  transform: scale(1.02);
+  cursor: default;
+}
+body main .galeria .producto .compras {
+  display: flex;
+  justify-content: center;
+}
+body main .galeria .producto .compras .btn-comprar {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+body main .galeria .producto .compras .btn-comprar:active {
+  background-color: #0263a0;
+  color: white;
+}
+body main .galeria .producto .compras .agregar-carrito {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+body main .galeria .producto .compras .agregar-carrito:active {
+  background-color: #0263a0;
+  color: white;
+}
+body main .galeria .producto:hover {
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.432) 0px 54px 55px, rgba(0, 0, 0, 0.459) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+body footer {
+  background-color: black;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body footer .redes {
+  margin: 0.5rem;
+}
+body footer p {
+  margin: 0.5rem;
+}
+body footer p:hover {
+  text-decoration: underline;
+  cursor: default;
+}
 
 /*# sourceMappingURL=style.css.map */

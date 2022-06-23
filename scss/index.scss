@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Go Pro;
@@ -9,4 +9,171 @@
 @font-face {
     font-family: 'Go Pro';
     src: url(../fonts/Microgramma\ D\ Extended\ Medium.otf);
+}
+
+body {
+    header {
+        background-color: black;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        nav {
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 3rem;
+                margin-bottom: 0;
+
+                a {
+                    li {}
+                }
+
+                .carrito {
+                    font-size: 3rem;
+                    margin-right: 2rem;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    main {
+        background-color: #0367A6;
+        color: white;
+
+        .titulo {            
+            text-align: center;
+            padding: 1.5rem;
+            transition: 1s;
+
+            &:hover{
+                transform: scale(1.02);
+            }
+
+            h1{
+               font-size: 5rem;   
+               font-weight: bold;  
+            }
+
+            h2{
+               font-size: 2.5rem; 
+            }
+        }        
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 1rem;
+
+            .producto {
+                background-color: white;
+                color: black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 2rem;
+                border-radius: 1rem;
+                padding: 1rem;
+                transition: 1s;
+
+
+
+                .imagen-producto {
+                    width: 100%;
+                    border-radius: 1rem;
+                }
+
+                .desc-producto {}
+
+                .precio {
+                    background-color: black;
+                    color: white;
+                    font-size: 1.5rem;
+                    padding: 0.5rem;
+                    transition: 0.5s;
+                }
+
+                .precio:hover {
+                    transform: scale(1.02);
+                    cursor: default;
+                }
+
+                .compras {
+                    display: flex;
+                    justify-content: center;
+
+                    .btn-comprar {
+                        border: none;
+                        background-color: black;
+                        color: white;
+                        font-size: 1rem;
+                        padding: 1rem;
+                        margin: 1rem;
+
+                    }
+
+                    .btn-comprar:active {
+                        background-color: #0263a0;
+                        color: white;
+                    }
+
+                    .agregar-carrito {
+                        border: none;
+                        background-color: black;
+                        color: white;
+                        font-size: 1rem;
+                        padding: 1rem;
+                        margin: 1rem;
+
+                    }
+
+                    .agregar-carrito:active {
+                        background-color: #0263a0;
+                        color: white;
+                    }
+                }
+            }
+
+            .producto:hover {
+                padding: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.432) 0px 54px 55px, rgba(0, 0, 0, 0.459) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            }
+        }
+    }
+
+    footer {
+        background-color: black;
+        padding: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .redes {
+            margin: 0.5rem;
+        }
+
+
+        p {            
+            margin: 0.5rem
+        
+        }  
+        p:hover{
+            text-decoration: underline;
+            cursor: default;
+        }
+        
+        
+    }
+
 }

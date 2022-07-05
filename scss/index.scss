@@ -46,8 +46,8 @@ body {
     }
 
     main {
-        background-color: #0367A6;
-        color: white;
+        background-color: #dddddd;
+        color: black;
 
         .titulo {            
             text-align: center;
@@ -81,16 +81,14 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin: 2rem;
-                border-radius: 1rem;
+                margin: 2rem;                
                 padding: 1rem;
-                transition: 1s;
+                transition: 0.5s;
 
 
 
                 .imagen-producto {
-                    width: 100%;
-                    border-radius: 1rem;
+                    width: 100%;                   
                 }
 
                 .desc-producto {}
@@ -158,6 +156,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        color: white;
 
         .redes {
             margin: 0.5rem;

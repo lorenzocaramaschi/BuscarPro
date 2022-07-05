@@ -32,8 +32,8 @@ body header nav ul .carrito:hover {
   cursor: pointer;
 }
 body main {
-  background-color: #0367A6;
-  color: white;
+  background-color: #dddddd;
+  color: black;
 }
 body main .titulo {
   text-align: center;
@@ -64,13 +64,11 @@ body main .galeria .producto {
   justify-content: center;
   align-items: center;
   margin: 2rem;
-  border-radius: 1rem;
   padding: 1rem;
-  transition: 1s;
+  transition: 0.5s;
 }
 body main .galeria .producto .imagen-producto {
   width: 100%;
-  border-radius: 1rem;
 }
 body main .galeria .producto .precio {
   background-color: black;
@@ -122,6 +120,7 @@ body footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 body footer .redes {
   margin: 0.5rem;

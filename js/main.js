@@ -13,6 +13,7 @@ const productos = [
     { id: 9, producto: "Control 3 Botones", precio: 90 },
 ];
 
+
 /* Genero un array vacío donde irán los elementos agregados por el usuario */
 const carrito = [];
 
@@ -189,7 +190,7 @@ while (eliminacion) {
 
 
 /* Una vez salimos del ciclo, mostramos cuanto es el Precio final, y pregunto si al usuario le interesa pagar en cuotas */
-let cuotas = confirm("Precio Total: " + total + "\nPrecio Total (+IVA): " + iva(total) + "\n¿Desea pagar en cuotas?")
+let cuotas = confirm("Precio Total: " + total + "\nPrecio Total (+IVA): " + iva(total).toFixed(2) + "\n¿Desea pagar en cuotas?")
 
 /* Si el usuario quiere pagar en cuotas, le pregunto cuantas cuotas serían y luego le muestro cual es el precio a pagar y en cuantas cuotas mediante una alerta */
 if (cuotas) {
@@ -199,7 +200,7 @@ if (cuotas) {
 
 /* Muestro que es lo que compró por consola, lo que quedo en el carrito */
 for (const cuenta of carrito) {
-    console.log("Producto: " + cuenta.producto + "\nPrecio: " + cuenta.precio)
+    console.log("Compraste: \nProducto: " + cuenta.producto + "\nPrecio(+IVA): " + iva(cuenta.precio).toFixed(2))
 
 }
 
@@ -219,5 +220,40 @@ function iva(valor) {
 
 /* Si el usuario compró un producto, el precio no será 0 y por lo tanto, le mostramos un mensaje agradeciendole su compra! */
 if (total != 0) {
-    alert("¡Gracias por su compra!")
+    alert("¡Gracias por su compra!\nSu numero de orden de compra es el #" + codigoUsuario(1000000000, 9999999999)+"\nHora de la compra: "+new Date())
 }
+
+/* Genero un numero de compra aleatorio de 10 dígitos utilizando la siguiente función: */
+function codigoUsuario(min, max) {
+    return (Math.random() * (max - min) + min).toFixed();
+}
+
+/* Hago un mapa para el sort de Menor a mayor, para no romper el array de productos inicial */
+const precios = productos.map((el) => {
+    return {
+        precio: el.precio,
+        producto: el.producto
+    }
+}
+)
+
+/* Hago un mapa para el sort de Mayor a menor, para no romper el array de productos inicial */
+const precios2 = productos.map((el) => {
+    return {
+        precio: el.precio,
+        producto: el.producto
+    }
+}
+)
+
+
+/* Debug de Lista con precios de Menor a Mayor por consola */
+console.log("Precios Menor a Mayor:")
+console.log(precios.sort((a, b) => a.precio - b.precio))
+
+/* Debug de Lista con precios de Mayor a Menor por consola */
+console.log("Precios Mayor a Menor:")
+console.log(precios2.sort((a, b) => b.precio - a.precio)) 
+
+
+

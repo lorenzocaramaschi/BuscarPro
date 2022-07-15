@@ -1,4 +1,4 @@
-/* Desafío: Incorporar Arrays */
+/* Primera Entrega del Proyecto Final */
 
 /* Genero un array de objetos con todos los productos */
 const productos = [

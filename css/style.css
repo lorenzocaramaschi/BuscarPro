@@ -10,6 +10,18 @@
   font-family: "Go Pro";
   src: url(../fonts/Microgramma\ D\ Extended\ Medium.otf);
 }
+body .carrito-lista {
+  background: rgb(226, 225, 225);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  height: 100%;
+  transition: all 0.5s ease;
+  z-index: 11;
+  color: black;
+  overflow-y: scroll;
+}
 body header {
   background-color: black;
   color: white;

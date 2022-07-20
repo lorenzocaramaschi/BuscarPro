@@ -1,4 +1,8 @@
-/* Primera Entrega del Proyecto Final */
+/* Desafío: Interactuar con HTML */
+
+/* Busco la propieda del display de lista del carrito */
+let carritoLista = document.getElementById("carritoLista").style.display = "none"
+
 
 /* Genero un array de objetos con todos los productos */
 const productos = [
@@ -37,48 +41,68 @@ switch (eleccion) {
         console.log("Has seleccionado el producto " + eleccion + ",'Carcasa Hero 3 y 4': $100")
         total = total + productos[0].precio;
         carrito.push(productos[0]);
+        /* Agregué al primer caso de compra una función que cambia el display de la lista del carrito de none a block */
+        abrirCarrito()
+        /* Agrego el item seleccionado con la función sumar al carrito */
+        sumarAlCarrito(0)
         break;
     case 2:
         console.log("Has seleccionado el producto " + eleccion + ",'Funda Silicona Hero 9 y 10': $20")
         total = total + productos[1].precio;
         carrito.push(productos[1]);
+        abrirCarrito()
+        sumarAlCarrito(1)
         break;
     case 3:
         console.log("Has seleccionado el producto " + eleccion + ",'Correa Control GoPro': $25")
         total = total + productos[2].precio;
         carrito.push(productos[2]);
+        abrirCarrito()
+        sumarAlCarrito(2)
         break;
     case 4:
         console.log("Has seleccionado el producto " + eleccion + ",'Pechera infantil': $30")
         total = total + productos[3].precio;
         carrito.push(productos[3]);
+        sumarAlCarrito(3)
+        abrirCarrito()
         break;
     case 5:
         console.log("Has seleccionado el producto " + eleccion + ",'Camara sumergible GoPro Hero 7': $250")
         total = total + productos[4].precio;
         carrito.push(productos[4]);
+        abrirCarrito()
+        sumarAlCarrito(4)
         break;
     case 6:
         console.log("Has seleccionado el producto " + eleccion + ",'Carcasa original GoPro Hero 5,6 y 7': $125")
         total = total + productos[5].precio;
         carrito.push(productos[5]);
+        abrirCarrito()
+        sumarAlCarrito(5)
         break;
     case 7:
         console.log("Has seleccionado el producto " + eleccion + ",'Soporte Doble': $50")
         total = total + productos[6].precio;
         carrito.push(productos[6]);
+        abrirCarrito()
+        sumarAlCarrito(6)
         break;
 
     case 8:
         console.log("Has seleccionado el producto " + eleccion + ",'Filtros GoPro': $35")
         total = total + productos[7].precio;
         carrito.push(productos[7]);
+        abrirCarrito()
+        sumarAlCarrito(7)
         break;
 
     case 9:
         console.log("Has seleccionado el producto " + eleccion + ",'Control 3 Botones': $90")
         total = total + productos[8].precio;
         carrito.push(productos[8]);
+        abrirCarrito()
+        sumarAlCarrito(8)
         break;
 
     default:
@@ -105,48 +129,57 @@ while (confirmacion) {
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[0].producto + "': $" + productos[0].precio)
             total = total + productos[0].precio;
             carrito.push(productos[0]);
+            sumarAlCarrito(0)
             break;
         case 2:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[1].producto + "': $" + productos[1].precio)
             total = total + productos[1].precio;
             carrito.push(productos[1]);
+            sumarAlCarrito(1)
             break;
         case 3:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[2].producto + "': $" + productos[2].precio)
             total = total + productos[2].precio;
             carrito.push(productos[2]);
+            sumarAlCarrito(2)
             break;
         case 4:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[3].producto + "': $" + productos[3].precio)
             total = total + productos[3].precio;
             carrito.push(productos[3]);
+            sumarAlCarrito(3)
             break;
         case 5:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[4].producto + "': $" + productos[4].precio)
             total = total + productos[4].precio;
             carrito.push(productos[4]);
+            sumarAlCarrito(4)
             break;
         case 6:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[5].producto + "': $" + productos[5].precio)
             total = total + productos[5].precio;
             carrito.push(productos[5]);
+            sumarAlCarrito(5)
             break;
         case 7:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[6].producto + "': $" + productos[6].precio)
             total = total + productos[6].precio;
             carrito.push(productos[6]);
+            sumarAlCarrito(6)
             break;
 
         case 8:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[7].producto + "': $" + productos[7].precio)
             total = total + productos[7].precio;
             carrito.push(productos[7]);
+            sumarAlCarrito(7)
             break;
 
         case 9:
             console.log("Has seleccionado el producto " + eleccion + ",'" + productos[8].producto + "': $" + productos[8].precio)
             total = total + productos[8].precio;
             carrito.push(productos[8]);
+            sumarAlCarrito(8)
             break;
 
         default:
@@ -178,6 +211,9 @@ while (eliminacion) {
     if (index != -1) {
         total = total - carrito[index].precio
         carrito.splice(index, 1)
+        /* Elimino el hijo específico para que desaparezca de la lista carrito */
+        document.getElementById("carritoLista").removeChild(document.getElementById("carritoLista").children[index])
+
     }
     /* Si el indice es -1, osea no existe la ID ingresada, le llega una alerta al usuario para informarlo */
     else {
@@ -188,6 +224,13 @@ while (eliminacion) {
     eliminacion = confirm("¿Desea eliminar otro producto?")
 }
 
+/* Agrego el Total de la compra en la lista */
+let precioTotal = document.createElement("h2")
+precioTotal.innerHTML = `Total (+IVA): ${iva(total)}`
+precioTotal.style.margin = "1rem"
+precioTotal.style.backgroundColor = "black"
+precioTotal.style.color = "white"
+document.getElementById("carritoLista").appendChild(precioTotal)
 
 /* Una vez salimos del ciclo, mostramos cuanto es el Precio final, y pregunto si al usuario le interesa pagar en cuotas */
 let cuotas = confirm("Precio Total: " + total + "\nPrecio Total (+IVA): " + iva(total).toFixed(2) + "\n¿Desea pagar en cuotas?")
@@ -204,6 +247,7 @@ for (const cuenta of carrito) {
 
 }
 
+
 /* Esta funcion agarra un valor y se lo divide al total del producto, que a su vez previamente fue pasado por la funcion "iva" */
 function valorCuotas(cantidadCuotas) {
     let precioCuota = iva(total) / cantidadCuotas
@@ -215,12 +259,31 @@ function valorCuotas(cantidadCuotas) {
 function iva(valor) {
     let valorAgregado = valor * 1.21
     parseFloat(valorAgregado.toFixed(2))
-    return valorAgregado
+    return valorAgregado.toFixed(2)
+}
+
+/* Esta función agrega un div que contiene el nombre y precio del producto que selecciona el usuario al carrito */
+function sumarAlCarrito(valor) {
+    let prod1 = document.createElement("div")
+    prod1.innerHTML = `<h3> ${productos[valor].producto} </h3>
+        <p> $${iva(productos[valor].precio)} </p>`
+    prod1.style.margin = "1rem"
+    return document.getElementById("carritoLista").appendChild(prod1)
+}
+
+/* Esta función cambia el display del carrito de none a block */
+function abrirCarrito() {
+    carritoLista = document.getElementById("carritoLista").style.display = "block"
+}
+
+/* Esta función cambia el display del carrito de block a none */
+function cerrarCarrito() {
+    carritoLista = document.getElementById("carritoLista").style.display = "none"
 }
 
 /* Si el usuario compró un producto, el precio no será 0 y por lo tanto, le mostramos un mensaje agradeciendole su compra! */
 if (total != 0) {
-    alert("¡Gracias por su compra!\nSu numero de orden de compra es el #" + codigoUsuario(1000000000, 9999999999)+"\nHora de la compra: "+new Date())
+    alert("¡Gracias por su compra!\nSu numero de orden de compra es el #" + codigoUsuario(1000000000, 9999999999) + "\nHora de la compra: " + new Date())
 }
 
 /* Genero un numero de compra aleatorio de 10 dígitos utilizando la siguiente función: */
@@ -246,14 +309,15 @@ const precios2 = productos.map((el) => {
 }
 )
 
-
 /* Debug de Lista con precios de Menor a Mayor por consola */
 console.log("Precios Menor a Mayor:")
 console.log(precios.sort((a, b) => a.precio - b.precio))
 
 /* Debug de Lista con precios de Mayor a Menor por consola */
 console.log("Precios Mayor a Menor:")
-console.log(precios2.sort((a, b) => b.precio - a.precio)) 
+console.log(precios2.sort((a, b) => b.precio - a.precio))
+
+
 
 
 

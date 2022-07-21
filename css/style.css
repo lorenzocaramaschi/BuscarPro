@@ -10,18 +10,6 @@
   font-family: "Go Pro";
   src: url(../fonts/Microgramma\ D\ Extended\ Medium.otf);
 }
-body .carrito-lista {
-  background: rgb(226, 225, 225);
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 20rem;
-  height: 100%;
-  transition: all 0.5s ease;
-  z-index: 11;
-  color: black;
-  overflow-y: scroll;
-}
 body header {
   background-color: black;
   color: white;
@@ -43,23 +31,115 @@ body header nav ul .carrito {
 body header nav ul .carrito:hover {
   cursor: pointer;
 }
+body header nav ul .mi-carrito {
+  background: rgb(226, 225, 225);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 20rem;
+  height: 100%;
+  transition: all 0.5s ease;
+  z-index: 11;
+  color: black;
+  overflow-y: scroll;
+  transition: all 0.5s ease;
+}
+body header nav ul .mi-carrito .titulo-carrito {
+  text-align: center;
+  font-size: 1.75rem;
+}
+body header nav ul .mi-carrito .contenido-carrito .caja-carrito {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+body header nav ul .mi-carrito .contenido-carrito .caja-carrito .carrito-imagen {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+body header nav ul .mi-carrito .contenido-carrito .caja-carrito .detalles {
+  display: grid;
+  row-gap: 0.5rem;
+}
+body header nav ul .mi-carrito .contenido-carrito .caja-carrito .detalles .titulo-producto {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+body header nav ul .mi-carrito .contenido-carrito .caja-carrito .detalles .precio-carrito {
+  font-weight: 500;
+  font-size: 1rem;
+  font: bold;
+}
+body header nav ul .mi-carrito .contenido-carrito .caja-carrito .detalles .cantidad-carrito {
+  border: 1px solid black;
+  width: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+body header nav ul .mi-carrito .contenido-carrito .caja-carrito .remover-carrito {
+  font-size: 2rem;
+  cursor: pointer;
+}
+body header nav ul .mi-carrito .total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid black;
+  margin-right: 0.5rem;
+}
+body header nav ul .mi-carrito .total .total-titulo {
+  font-size: 1rem;
+}
+body header nav ul .mi-carrito .total .precio-total {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+body header nav ul .mi-carrito .btn-comprar {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+body header nav ul .mi-carrito .btn-comprar:hover {
+  background-color: #0263a0;
+}
+body header nav ul .mi-carrito .cerrar-carrito {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+body header nav ul .abrir-carrito {
+  right: 0;
+}
 body main {
   background-color: #dddddd;
   color: black;
 }
-body main .titulo {
+body main .titulo-pagina {
   text-align: center;
   padding: 1.5rem;
   transition: 1s;
 }
-body main .titulo:hover {
+body main .titulo-pagina:hover {
   transform: scale(1.02);
 }
-body main .titulo h1 {
+body main .titulo-pagina h1 {
   font-size: 5rem;
   font-weight: bold;
 }
-body main .titulo h2 {
+body main .titulo-pagina h2 {
   font-size: 2.5rem;
 }
 body main .galeria {
@@ -88,36 +168,22 @@ body main .galeria .producto .precio {
   font-size: 1.5rem;
   padding: 0.5rem;
   transition: 0.5s;
+  border-radius: 0.5rem;
 }
 body main .galeria .producto .precio:hover {
   transform: scale(1.02);
   cursor: default;
 }
-body main .galeria .producto .compras {
-  display: flex;
-  justify-content: center;
-}
-body main .galeria .producto .compras .btn-comprar {
+body main .galeria .producto .agregar-carrito {
   border: none;
   background-color: black;
   color: white;
   font-size: 1rem;
   padding: 1rem;
   margin: 1rem;
+  border-radius: 0.5rem;
 }
-body main .galeria .producto .compras .btn-comprar:active {
-  background-color: #0263a0;
-  color: white;
-}
-body main .galeria .producto .compras .agregar-carrito {
-  border: none;
-  background-color: black;
-  color: white;
-  font-size: 1rem;
-  padding: 1rem;
-  margin: 1rem;
-}
-body main .galeria .producto .compras .agregar-carrito:active {
+body main .galeria .producto .agregar-carrito:active {
   background-color: #0263a0;
   color: white;
 }

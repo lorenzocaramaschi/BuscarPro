@@ -119,8 +119,11 @@ body {
                                 }
 
                                 .cantidad-carrito {
-                                    border: 1px solid black;
-                                    width: 2rem;
+                                    border: none;
+                                    border-radius: 0.3rem;
+                                    background-color: black;
+                                    color: white;                                
+                                    width: 3.4rem;
                                     text-align: center;
                                     font-size: 1rem;
                                 }

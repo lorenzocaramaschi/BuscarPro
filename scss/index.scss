@@ -22,7 +22,31 @@ body {
         top: 0;
         z-index: 10;
 
-        
+        .contador-carrito{
+            background-color: #0263a0;
+            color: white;
+            border-radius: 1rem;
+            font-size: 1rem;
+            padding: 0.5rem 0.7rem;
+            margin: 0;
+            position: absolute;
+            right: 2%;
+            top: 45%;
+            
+        }
+
+        .carrito{
+            @media (max-width: 450px) {
+                font-size: 2rem;
+            }
+        }
+
+        .logo-buscarPro {
+            @media (max-width: 450px) {
+                width: 55%;
+            }
+        }
+
         nav {
 
             ul {
@@ -37,7 +61,7 @@ body {
                 }
 
                 .carrito {
-                    font-size: 3rem;
+                    font-size: 5rem;
                     margin-right: 2rem;
 
                     &:hover {
@@ -57,7 +81,7 @@ body {
                     z-index: 11;
                     color: black;
                     overflow-y: scroll;
-                    transition: all 0.5s ease;                    
+                    transition: all 0.5s ease;
 
                     .titulo-carrito {
                         text-align: center;
@@ -196,6 +220,19 @@ body {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
             grid-gap: 1rem;
+
+            @media (max-width: 450px) {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 0.25rem;
+                margin: 0 auto;
+            }
+
+            @media (min-width:451px) and (max-width: 960px) {
+                display: grid;
+                grid-template-columns: repeat(2, 0.5fr);
+                grid-gap: 0.5rem;
+            }
 
             .producto {
                 background-color: white;

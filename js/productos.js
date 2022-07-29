@@ -1,0 +1,77 @@
+/* Array con los productos */
+
+let productos = [
+    {
+        id: 1,
+        nombre: "Carcasa Hero 3 y 4",
+        categoria: "carcasas",
+        cantidad: 1,
+        precio: 100,
+        img: "../img/products/product-1.png"
+    },
+    {
+        id: 2,
+        nombre: "Funda Silicona Hero 9 y 10",
+        categoria: "fundas",
+        cantidad: 1,
+        precio: 20,
+        img: "../img/products/product-2.png"
+    },
+    {
+        id: 3,
+        nombre: "Correa Control GoPro",
+        categoria: "accesorios",
+        cantidad: 1,
+        precio: 25,
+        img: "../img/products/product-3.png"
+    },
+    {
+        id: 4,
+        nombre: "Pechera infantil",
+        categoria: "accesorios",
+        cantidad: 1,
+        precio: 30,
+        img: "../img/products/product-4.png"
+    },
+    {
+        id: 5,
+        nombre: "Camara sumergible GoPro Hero 7",
+        categoria: "camara",
+        cantidad: 1,
+        precio: 250,
+        img: "../img/products/product-5.png"
+    },
+    {
+        id: 6,
+        nombre: "Carcasa original GoPro Hero 5, 6 y 7",
+        categoria: "carcasas",
+        cantidad: 1,
+        precio: 125,
+        img: "../img/products/product-6.png"
+    },
+    {
+        id: 7,
+        nombre: "Soporte Doble",
+        categoria: "accesorios",
+        cantidad: 1,
+        precio: 50,
+        img: "../img/products/product-7.png"
+    },
+    {
+        id: 8,
+        nombre: "Filtros GoPro",
+        categoria: "filtros",
+        cantidad: 1,
+        precio: 35,
+        img: "../img/products/product-8.png"
+    },
+    {
+        id: 9,
+        nombre: "Control 3 Botones",
+        categoria: "accesorios",
+        cantidad: 1,
+        precio: 90,
+        img: "../img/products/product-9.png"
+    },
+
+]

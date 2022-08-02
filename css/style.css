@@ -103,6 +103,7 @@ body header nav ul .mi-carrito .contenido-carrito .caja-carrito .detalles .canti
   width: 3.4rem;
   text-align: center;
   font-size: 1rem;
+  cursor: default;
 }
 body header nav ul .mi-carrito .contenido-carrito .caja-carrito .remover-carrito {
   font-size: 2rem;

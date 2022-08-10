@@ -10,6 +10,18 @@
   font-family: "Go Pro";
   src: url(../fonts/Microgramma\ D\ Extended\ Medium.otf);
 }
+body header nav ul a .icono-fotos {
+  font-size: 4rem;
+  color: white;
+}
+body header nav ul a {
+  color: white;
+}
+@media (max-width: 450px) {
+  body header nav ul a {
+    font-size: 2rem;
+  }
+}
 body header {
   background-color: black;
   color: white;
@@ -36,7 +48,8 @@ body header .contador-carrito {
 }
 @media (max-width: 450px) {
   body header .logo-buscarPro {
-    width: 55%;
+    width: 180px;
+    height: 100px;
   }
 }
 body header nav ul {
@@ -49,6 +62,12 @@ body header nav ul {
 body header nav ul .carrito {
   font-size: 5rem;
   margin-right: 2rem;
+}
+@media (max-width: 450px) {
+  body header nav ul .carrito {
+    margin-right: 1rem;
+    font-size: 3rem;
+  }
 }
 body header nav ul .carrito:hover {
   cursor: pointer;
@@ -153,10 +172,50 @@ body main {
   background-color: #dddddd;
   color: black;
 }
+body main .galeria-fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: 100px;
+  object-fit: contain;
+  overflow: hidden;
+  gap: 0.5rem;
+  margin: 2rem;
+}
+@media (max-width: 450px) {
+  body main .galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.25rem;
+    margin: 0.25rem;
+  }
+}
+@media (min-width: 451px) and (max-width: 960px) {
+  body main .galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-gap: 0.5rem;
+  }
+}
+body main .galeria-fotos .foto-galeria {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
 body main .titulo-pagina {
   text-align: center;
   padding: 1.5rem;
   transition: 1s;
+}
+@media (max-width: 450px) {
+  body main .titulo-pagina {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 451px) and (max-width: 960px) {
+  body main .titulo-pagina {
+    padding: 1rem;
+  }
 }
 body main .titulo-pagina:hover {
   transform: scale(1.02);
@@ -165,8 +224,28 @@ body main .titulo-pagina h1 {
   font-size: 5rem;
   font-weight: bold;
 }
+@media (max-width: 450px) {
+  body main .titulo-pagina h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 451px) and (max-width: 960px) {
+  body main .titulo-pagina h1 {
+    font-size: 3rem;
+  }
+}
 body main .titulo-pagina h2 {
   font-size: 2.5rem;
+}
+@media (max-width: 450px) {
+  body main .titulo-pagina h2 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 451px) and (max-width: 960px) {
+  body main .titulo-pagina h2 {
+    font-size: 1.3rem;
+  }
 }
 body main .galeria {
   display: grid;
@@ -240,12 +319,24 @@ body footer {
   align-items: center;
   justify-content: center;
   color: white;
+  text-align: center;
+}
+@media (max-width: 450px) {
+  body footer {
+    padding: 1rem;
+  }
 }
 body footer .redes {
   margin: 0.5rem;
 }
 body footer p {
   margin: 0.5rem;
+}
+@media (max-width: 450px) {
+  body footer p {
+    margin: 0.2rem;
+    font-size: 12px;
+  }
 }
 body footer p:hover {
   text-decoration: underline;

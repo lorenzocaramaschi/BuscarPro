@@ -1,13 +1,18 @@
-/* Desafío: Optimizando el proyecto final */
+/* Desafío: Fetch en tu proyecto */
 
 /* Voy a buscar objetos al DOM */
+// Busco el icono del carrito
 let carritoIcono = document.querySelector("#carrito")
+// Busco el contenedor del carrito
 let carrito = document.querySelector(".mi-carrito")
+// Busco la cruz con la que cierro el contenedor del carrito
 let cerrarCarrito = document.querySelector(".cerrar-carrito")
+// Busco el texto del precio total del contenedor del carrito
 let precioTotal = document.getElementById("precioTotal")
+// Busco el span de la cantidad de productos del carrito
 let contadorCarrito = document.getElementById("contadorCarrito")
+// Busco el boton de comprar
 let botonComprar = document.getElementById("btnComprar")
-
 
 /* Cuando tocamos el boton de "Comprar", se resetea el carrito */
 const compraProcesada = () => {
@@ -43,7 +48,6 @@ const compraProcesada = () => {
     actualizarCarrito()
 }
 botonComprar.addEventListener("click", compraProcesada)
-
 
 
 /* Abro Carrito */
@@ -111,6 +115,7 @@ const agregarAlCarrito = (prodId) => {
 
     }
 
+    /* Agregué un Toast por cada producto que se va agregando al carrito */
     Toastify({
         text: "Añadiste un producto",
         duration: 1500,
@@ -155,7 +160,7 @@ const actualizarCarrito = () => {
         <img src="${img}" alt="producto1" class="carrito-imagen">
         <div class="detalles">
             <div class="titulo-producto">${nombre}</div>
-            <div id="precioCarrito" class="precio-carrito">${precio}</div>
+            <div id="precioCarrito" class="precio-carrito">$${precio}</div>
             <input readonly = "readonly" id="cantidadCarrito" type="number" value="${cantidad}" class="cantidad-carrito">
         </div>
         <img class="remover-carrito" onclick = "eliminarDelCarrito(${id})"
@@ -170,5 +175,12 @@ const actualizarCarrito = () => {
     contadorCarrito.innerText = carro.length
 
     /* Junto todos los precios de los productos en el array del carrito con un reduce y los conecto con el string del precio total */
-    precioTotal.innerText = carro.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
+    precioTotal.innerText = "$" + carro.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
 }
+
+
+
+
+
+
+

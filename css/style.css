@@ -6,9 +6,38 @@
   list-style: none;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 @font-face {
   font-family: "Go Pro";
   src: url(../fonts/Microgramma\ D\ Extended\ Medium.otf);
+}
+body {
+  background-color: #dddddd;
+}
+body .btn-compra {
+  margin: 0.5rem;
+  margin-left: 0;
+  padding: 12px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+body .btn-compra:hover {
+  background-color: #0263a0;
+}
+body .btn-compra.cancelar:hover {
+  background-color: rgb(150, 1, 1) !important;
+}
+body .btn-comprar.cancelar:hover {
+  background-color: rgb(150, 1, 1) !important;
 }
 body header nav ul a .icono-fotos {
   font-size: 4rem;
@@ -145,7 +174,7 @@ body header nav ul .mi-carrito .total .precio-total {
 }
 body header nav ul .mi-carrito .btn-comprar {
   display: flex;
-  margin: 1.5rem auto 0 auto;
+  margin: 0;
   padding: 12px 20px;
   border: none;
   background-color: black;
@@ -171,6 +200,28 @@ body header nav ul .abrir-carrito {
 body main {
   background-color: #dddddd;
   color: black;
+}
+body main .cuenta-usuario {
+  background-color: white;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  height: 50%;
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+body main .cuenta-usuario span {
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+body main .cuenta-usuario .item-cuenta {
+  background-color: black;
+  color: white;
 }
 body main .galeria-fotos {
   display: grid;
@@ -201,6 +252,10 @@ body main .galeria-fotos .foto-galeria {
   height: 100%;
   object-fit: cover;
   margin: 0;
+  transition: all ease 0.4s;
+}
+body main .galeria-fotos .foto-galeria:hover {
+  padding: 0.3rem;
 }
 body main .titulo-pagina {
   text-align: center;
@@ -216,9 +271,6 @@ body main .titulo-pagina {
   body main .titulo-pagina {
     padding: 1rem;
   }
-}
-body main .titulo-pagina:hover {
-  transform: scale(1.02);
 }
 body main .titulo-pagina h1 {
   font-size: 5rem;
@@ -339,6 +391,40 @@ body footer p {
   }
 }
 body footer p:hover {
+  text-decoration: underline;
+  cursor: default;
+}
+body .footerCompra {
+  background-color: black;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+@media (max-width: 450px) {
+  body .footerCompra {
+    padding: 1rem;
+  }
+}
+body .footerCompra .redes {
+  margin: 0.5rem;
+}
+body .footerCompra p {
+  margin: 0.5rem;
+}
+@media (max-width: 450px) {
+  body .footerCompra p {
+    margin: 0.2rem;
+    font-size: 12px;
+  }
+}
+body .footerCompra p:hover {
   text-decoration: underline;
   cursor: default;
 }

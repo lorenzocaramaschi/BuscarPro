@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotos de Buscar Pro | Las mejores tomas hechas con las mejores cámaras del mercado</title>
+    <title>Tu Compra | Buscar Pro</title>
     <meta name="description"
         content="Buscar Pro te ofrece los mejores accesorios y cámaras de acción, para inmortalizar tus nuevas experiencias extremas. Aprovecha las mejores ofertas que te traemos y adquirí lo mejor!">
     <meta name="keywords"
@@ -56,10 +56,7 @@
 
     <header>
         <nav>
-            <ul>
-                <a href="fotos.html" class="icono-fotos">
-                    <i class='bx bxs-camera'></i>
-                </a>               
+            <ul>                            
                 <a href="index.html">
                     <li><img src="img/logos/logo-buscarpro.png" alt="Logo Buscar Pro" class="logo-buscarPro"></li>
                 </a>                               
@@ -69,22 +66,24 @@
 
 
 
-    <main>
+    <main style="padding-bottom: 10rem;">
         <div class="titulo-pagina">
-            <h1 class="animate__animated animate__fadeInDown">
-                Saca las mejores fotos
-            </h1>
-            <h2 class="animate__animated animate__fadeIn">
-                Aquí algunas de las mejores fotos que se sacan con nuestros productos
-            </h2>
+            <h1>
+                Tu compra
+            </h1>           
         </div>
 
-        <div id="galeriaFotos" class="galeria-fotos">
-
+        <div id="cuenta" class="cuenta-usuario">
+            <h3 style="border-bottom: 1.5px solid black;"><i class='bx bxs-shopping-bag'></i>Productos:</h3>
+            <div id="productosComprados"></div>
+            <div>
+                <button id="btnCompra" class="btn-compra">Confirmar</button>
+                <button onclick="window.history.go(-1); return false;"id="btnCancelar"class="btn-compra cancelar">Cancelar</button>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="footerCompra">
         <div class="redes">
             <a href="https://www.instagram.com/buscarpro/" target="_blank"><img src="img/logos/logo-instagram.png"
                     width="25" height="25" alt="Logo Instagram"></a>
@@ -107,8 +106,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <!-- JS -->
-    <script src="js/fotos.js"></script>
+    <!-- JS -->    
+    <script src="./js/compra.js"></script>
 </body>
 
 </html>
